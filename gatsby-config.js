@@ -5,7 +5,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://01unr0-xi.myshopify.com`, x
+    siteUrl: `https://01unr0-xi.myshopify.com`,
   },
   plugins: [
     {
