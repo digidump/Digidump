@@ -1,19 +1,21 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://01unr0-xi.myshopify.com`,
   },
   plugins: [
- {
+    {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: process.env.SHOP_NAME,
-        accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
-        storeURL: process.env.STOREURL,
-        password: process.env.PASSWORD
-      }
-    }
+        password: process.env.SHOPIFY_APP_PASSWORD,
+        storeUrl: process.env.GATSBY_MYSHOPIFY_URL,
+      },
+    },
+    "gatsby-plugin-image",
   ],
 }
+
